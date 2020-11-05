@@ -16,6 +16,7 @@ namespace Business.Providers
             _emailConfig = emailConfig.Value;
             _configuration = configuration;
             //bing emailconfig on appsettings to emailconfig model
+            //_configuration.GetSection("EmailConfig").Bind(_emailConfig);
         }
 
         public async Task SendQuickMail(string recipient, string subject, string message, string Cc = null)
